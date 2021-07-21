@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>The Light Side </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="assets/css/estilo.css">
+    <script src='main.js'></script>
+</head>
+
+<body>
+
+    <header>
+        <section>
+            <span id="titulo-header">Star Wars</span>
+
+            <nav>
+                <ul>
+                    <li id="menu">
+                        <a href="index.html">Home</a> |
+                        <a href="darkside.html">Join The Dark Side</a> |
+                        <a href="lightside.html"> Join The Light Side </a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="imagem-lado">
+                <div>
+                    <img src="assets/img/joinresistence.jpg" width="500px" height="650px">
+                </div>
+                <div>
+                    <h1>BEM-VINDO AO LADO LUMINOSO DA FORÇA</h1>
+                    <p class="texto">O Lado Luminoso está recrutando novos voluntários para a Resistência e novos Jedi.
+                        Se inscreva para participar do nosso processo seletivo.
+                        Que a força esteja com você, jovem Padawan!
+                    </p>
+                    <div class="formulario">
+
+                        <form>
+                            <label for="nome"> Nome: </label>
+                            <input id="nome" type="text" placeholder="Nome Completo" class="input-padrao" required onkeyup='validaNome ()'>
+                            <div id="txtNome"></div>
+
+                            <label for="email">Email: </label>
+                            <input id="email" type="email" placeholder="exemplol@email.com" class="input-padrao"
+                                required onkeyup='validaEmail ()'>
+                            <div id="txtEmail"></div>
+
+                            <label for="telefone">Telefone:</label>
+                            <input id="telefone" type="tel" placeholder="(xx)xxxxx-xxxx" class="input-padrao">
+
+
+                            <label for="apply">Escreva porque quer ser do Lado Luminoso:</label>
+                            <textarea name="apply" id="apply" cols="70" rows="10" class="input-padrao" required
+                                onkeyup="validaMensagem ()"></textarea>
+                            <div id="txtMensagem"></div>
+
+                            <button id="botaoEnviar"> Enviar </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </main>
+    <footer>
+        <p> &copy; Desenvolvido por Giovanni Cerqueira</p>
+    </footer>
+</body>
+</html>
