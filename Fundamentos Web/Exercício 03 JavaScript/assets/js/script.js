@@ -7,44 +7,50 @@ por Seletor: querySelector ()
 */
 
 
-let nome = document.getElementById('nome') // get especifico do id não precisa de #
-let email = window.document.getElementById('email') // "window" antes do document ajuda a completar os comandos
-let assunto = window.document.querySelector('#assunto') // querySelector precisa da //#endregion
+let nome = window.document.getElementById('nome')
+let email = document.querySelector('#email')
+let telefone = document.querySelector('#telefone')
+let mensagem = document.querySelector('#apply')
 
 
 function validaNome() {
-    let txtNome = document.querySelector('#txtNome')
+
+    let txt = document.querySelector('#txtNome')
+
     if (nome.value.length < 3) {
-        txtNome.innerHTML = "Nome inválido - Digite um nome válido."
-        txtNome.style.color = "red"
+
+        txt.innerHTML = 'Nome inválido'
+        txt.style.color = 'red'
+    } else {
+        txt.innerHTML = 'Nome válido'
+        txt.style.color = 'green'
     }
-    else {
-        txtNome.innerHTML = ""
-        txtNome.style.color = "green"
-    }
+
 }
 
 function validaEmail() {
     let txtEmail = document.querySelector('#txtEmail')
-    if (email.value.indexOf('@') == -1) { //obrigação de incluir um @ no campo EMAIL
-        txtEmail.innerHTML = "E-mail inválido"
-        txtEmail.style.color = "red"
-        
-    }
-    else {
-        txtEmail.innerHTML = ""
-        txtEmail.style.color = "green"
+
+    if (email.value.indexOf('@') == -1 || email.value.indexOf('.') == -1) {
+        txtEmail.innerHTML = 'Email inválido'
+        txtEmail.style.color = 'red'
+    } else {
+        txtEmail.innerHTML = 'Email válido'
+        txtEmail.style.color = 'green'
     }
 }
 
-function validaAssunto() {
-    let txtAssunto = document.querySelector("#txtAssunto")
-    if (assunto.value.length < 4) {
-        txtAssunto.innerHTML = "Mínimo de 4 caracteres necessários!"
-        txtAssunto.style.color = "red"
+function validaMensagem() {
+    let txtMensagem = document.querySelector('#txtMensagem')
+
+    if (mensagem.value.length < 3) {
+
+        txtMensagem.innerHTML = 'Você precisa digitar mais motivos!'
+        txtMensagem.style.color = 'red'
+
+    } else {
+        txtMensagem.innerHTML = ''
+        txtMensagem.style.color = 'green'
     }
-    else {
-        txtAssunto.innerHTML = ""
-        txtAssunto.style.color = "green"
-    }
+
 }
